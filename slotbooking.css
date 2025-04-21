@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('grass.jpg') center/cover no-repeat;
+    color: #354f3c;
+    line-height: 1.6;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(45deg, #354f3c, #354f3c 10px, #4a785e 10px, #4a785e 20px);
+    opacity: 0.02;
+    z-index: -1;
+}
+
+.main {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.main-top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #4a785e;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    color: #4a785e;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #4a785e;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #354f3c;
+    box-shadow: 0 0 15px rgba(74, 120, 94, 0.3);
+    outline: none;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #4a785e;
+    color: #f6f4c3;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #354f3c;
+    transform: scale(1.05);
+}
+
+a {
+    color: #4a785e;
+    text-decoration: none;
+    transition: border-bottom 0.2s;
+}
+
+a:hover {
+    border-bottom: 2px solid #354f3c;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 10px rgba(74, 120, 94, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

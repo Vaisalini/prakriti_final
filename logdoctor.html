@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="logpatient.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+  
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="prakritiintro.png" alt="">
+                <h1>Prakriti</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="docdashboard.html">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item">Profile</span>
+                    </a>
+                </li>
+                <li><a href="enteraddress.html">
+                    <i class="fas fa-map-marker"></i>
+                    <span class="nav-item">Enter Address</span>
+                </a></li>
+                
+                
+                
+                <li><a href="contactus.html">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="nav-item">Help</span>
+                </a></li>
+                <li><a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Logout</span>
+                </a></li>
+            </ul>
+        </nav>
+
+        <section class="main">
+            <div class="main-top">
+                <p>Get your holistic experience here!</p>
+            </div>
+            <h1>Welcome to the Doctor Dashboard!</h1>
+
+            <table border="1" id="appointmentsTable">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Service Type</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody id="bookedSlotsContainer">
+                    <!-- Appointments will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <!-- Map section -->
+            <div id="map"></div>
+        </section>
+    </div>
+    
+</div>
+</div> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="logdoctor.js"></script>
+    
+</body>
+</html>

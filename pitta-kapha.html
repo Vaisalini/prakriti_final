@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-df9zIeAk5I3/9eun6MIKNU6EkPA7mryOONcZS/5YHH6JKeEeR2iS5hX1lUmXU5ENfAoswvt4A0T/5i2HyvmS9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your custom stylesheet -->
+    <link rel="stylesheet" href="reccomendations.css">
+</head>
+<body>
+  <div class="container">
+      <div class="slide">
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">For Pitta-Kapha, focus on light, warm foods that are easy to digest. Choose foods with astringent, bitter, and spicy qualities to balance the heat of Pitta and the coolness of Kapha. Incorporate plenty of vegetables, grains, and legumes while minimizing dairy and fried foods.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">PITTA-KAPHA</div>
+                  <div class="des">For balancing both Pitta and Kapha, aim for a diet that is both stimulating and light. Foods that are spicy, bitter, and astringent will help manage Pitta's heat, while lighter, drier foods help reduce Kapha’s heaviness. Avoid excess sweets, oily foods, and dairy.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXERCISES</div>
+                  <div class="des">For Pitta-Kapha, regular physical activity is key. Engage in moderate exercises such as hiking, cycling, and strength training to stimulate both energy and metabolism. Include mindfulness exercises like yoga to maintain balance and calm.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">For Pitta-Kapha, focus on light, warm foods that are easy to digest. Choose foods with astringent, bitter, and spicy qualities to balance the heat of Pitta and the coolness of Kapha. Incorporate plenty of vegetables, grains, and legumes while minimizing dairy and fried foods.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">PITTA-KAPHA</div>
+                  <div class="des">For balancing both Pitta and Kapha, aim for a diet that is both stimulating and light. Foods that are spicy, bitter, and astringent will help manage Pitta's heat, while lighter, drier foods help reduce Kapha’s heaviness. Avoid excess sweets, oily foods, and dairy.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXERCISES</div>
+                  <div class="des">For Pitta-Kapha, regular physical activity is key. Engage in moderate exercises such as hiking, cycling, and strength training to stimulate both energy and metabolism. Include mindfulness exercises like yoga to maintain balance and calm.</div>
+                  
+              </div>
+          </div>
+      </div>
+      <div class="button">
+          <button class="prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+  </div>  
+
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1])
+})
+</script>
+ 
+</body>
+</html>

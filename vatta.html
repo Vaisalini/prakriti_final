@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-df9zIeAk5I3/9eun6MIKNU6EkPA7mryOONcZS/5YHH6JKeEeR2iS5hX1lUmXU5ENfAoswvt4A0T/5i2HyvmS9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your custom stylesheet -->
+    <link rel="stylesheet" href="reccomendations.css">
+</head>
+<body>
+  <div class="container">
+      <div class="slide">
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">A Vata-balancing diet includes warm, moist, and grounding foods like cooked grains, root vegetables, ghee, nuts, and soothing herbal teas.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">VATTA</div>
+                  <div class="des">Vata is one of the three doshas in Ayurveda, representing air and space. It governs movement, communication, and the nervous system.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXCERCISES</div>
+                  <div class="des">Vata types benefit from grounding, calming exercises like yoga, walking, tai chi, or swimming—done in a slow, steady, and routine manner.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">A Vata-balancing diet includes warm, moist, and grounding foods like cooked grains, root vegetables, ghee, nuts, and soothing herbal teas.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+            <div class="content">
+                <div class="name">VATTA</div>
+                <div class="des">Vata is one of the three doshas in Ayurveda, representing air and space. It governs movement, communication, and the nervous system.</div>
+                
+            </div>
+        </div>
+        <div class="item" style="background-image: url(yoga.jpg);">
+            <div class="content">
+                <div class="name">EXCERCISES</div>
+                <div class="des">Vata types benefit from grounding, calming exercises like yoga, walking, tai chi, or swimming—done in a slow, steady, and routine manner.</div>
+                
+            </div>
+        </div>
+      </div>
+      <div class="button">
+          <button class="prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+  </div>  
+
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1])
+})
+</script>
+ 
+</body>
+</html>

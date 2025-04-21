@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-df9zIeAk5I3/9eun6MIKNU6EkPA7mryOONcZS/5YHH6JKeEeR2iS5hX1lUmXU5ENfAoswvt4A0T/5i2HyvmS9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your custom stylesheet -->
+    <link rel="stylesheet" href="reccomendations.css">
+</head>
+<body>
+  <div class="container">
+      <div class="slide">
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">For Vata, focus on grounding, nourishing foods such as root vegetables, healthy fats, and warm meals. Include warming spices like ginger, cinnamon, and turmeric to enhance digestion.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">VATTA-PITTA</div>
+                  <div class="des">For Vata-Pitta balance, choose warm, mildly spiced foods, stay hydrated, avoid overstimulation, and maintain a calm daily routine with regular meals.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXERCISES</div>
+                  <div class="des">For Vata, gentle yoga or stretching routines like slow-flow vinyasa or yin yoga help calm the mind and body. Keep the exercises steady and avoid overexertion.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">For Vata, focus on grounding, nourishing foods such as root vegetables, healthy fats, and warm meals. Include warming spices like ginger, cinnamon, and turmeric to enhance digestion.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">VATTA</div>
+                  <div class="des">For Vata, incorporate warm, hydrating foods like soups, stews, and porridges. Include healthy fats such as ghee or olive oil, and emphasize grounding and calming practices.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXERCISES</div>
+                  <div class="des">For Vata, gentle yoga or stretching routines like slow-flow vinyasa or yin yoga help calm the mind and body. Keep the exercises steady and avoid overexertion.</div>
+                  
+              </div>
+          </div>
+      </div>
+      <div class="button">
+          <button class="prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+  </div>  
+
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1])
+})
+</script>
+ 
+</body>
+</html>

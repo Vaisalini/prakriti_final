@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="landing.css" />
+    <title>Web Design Mastery | Adventure Parallax</title>
+  </head>
+  <body>
+  </div >
+  <button class="login" onclick="redirectToLogin()">Login/Register</button>
+</div>
+    <div class="parallax__container">
+      <img src="grass.jpg" alt="parallax" />
+      
+      <h1 id="title">Chat Veda</h1>
+    </div>
+    <section class="about">
+      <div class="image__gallary">
+        <div class="image__card" id="image__card-1">
+          <img src="grid-1.jpg" alt="grid" />
+        </div>
+        <div class="image__card" id="image__card-2">
+          <img src="grid-2.jpg" alt="grid" />
+        </div>
+        <div class="image__card" id="image__card-3">
+          <img src="grid-3.jpg" alt="grid" />
+        </div>
+        <div class="image__card" id="image__card-4">
+          <img src="grid-4.jpg" alt="grid" />
+        </div>
+      </div>
+      <div class="details">
+        This platform serves as a digital bridge between Ayurvedic practitioners and those seeking natural healing.
+          Users can explore trusted Ayurvedic treatments and book appointments with certified experts. Discover
+          personalized wellness through herbal remedies, lifestyle guidance, and ancient wisdom. Embrace the power of
+          Ayurveda—connect, consult, and heal, all in one place.
+      </div>
+      
+    </section>
+
+    <script>
+      var title = document.getElementById("title");
+      var bg_2 = document.getElementById("bg-2");
+      var bg_3 = document.getElementById("bg-3");
+
+      var image_card_1 = document.getElementById("image__card-1");
+      var image_card_2 = document.getElementById("image__card-2");
+      var image_card_3 = document.getElementById("image__card-3");
+      var image_card_4 = document.getElementById("image__card-4");
+
+      document.addEventListener("scroll", (event) => {
+        var positionY = window.scrollY;
+
+        title.style.fontSize = `${Math.max(60, 100 - positionY * 0.1)}px`;
+
+        image_card_1.style.transform = `translateY(${
+          positionY * -0.5 + 400
+        }px)`;
+
+        image_card_2.style.transform = `translateY(${positionY * 0.1 + -50}px)`;
+
+        image_card_3.style.transform = `translateY(${
+          positionY * -0.1 + 100
+        }px)`;
+
+        image_card_4.style.transform = `translateY(${
+          positionY * 0.2 + -125
+        }px)`;
+
+        var _newOpacity = positionY * 0.001;
+        if (_newOpacity >= 0 && _newOpacity <= 1) {
+          image_card_1.style.opacity = _newOpacity;
+          image_card_2.style.opacity = _newOpacity;
+          image_card_3.style.opacity = _newOpacity;
+          image_card_4.style.opacity = _newOpacity;
+        }
+      });
+    </script>
+     
+
+ <script>
+     function redirectToLogin() {
+         window.location.href = "index.html";
+     }
+ </script>
+  </body>
+</html>
+

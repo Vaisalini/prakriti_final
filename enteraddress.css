@@ -1,0 +1,86 @@
+/* enteraddress.css */
+
+/* Import Ayurvedic Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #4caf50;
+    --light-green: #a5d6a7;
+    --background-color: #f1f8e9;
+    --text-color: #1b5e20;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --white: #ffffff;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+form#addressForm {
+    background-color: var(--white);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+    margin-left: 10%;
+    
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Label and Input */
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input#doctorAddress {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--light-green);
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input#doctorAddress:focus {
+    border-color: var(--primary-color);
+}
+
+/* Submit Button */
+button#submitButton {
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#submitButton:hover {
+    background-color: var(--secondary-color);
+}

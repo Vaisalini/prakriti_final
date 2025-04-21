@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f6f4c3, #b4daa7);
+    color: #4a785e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#user-info-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#user-info-container:hover {
+    transform: scale(1.05);
+}
+
+#user-info-container p {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #4a785e;
+}
+
+#user-info-container #full-name::before,
+#user-info-container #email::before,
+#user-info-container #gender::before,
+#user-info-container #age::before,
+#user-info-container #address::before {
+    content: "\2022"; /* Bullet point character */
+    margin-right: 10px;
+    color: #4a785e;
+}
+
+#user-info-container p {
+    padding: 10px;
+    border-bottom: 1px solid #4a785e;
+}
+
+#user-info-container h1 {
+    color: #4a785e;
+}
+
+#user-info-container:focus-within {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.bp-webchat-toggle-button {
+    background-color: #4a785e;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bp-webchat-toggle-button:hover {
+    background-color: #628a6e;
+}
+
+.bp-webchat-toggle-button i {
+    color: #f6f4c3;
+}
+
+body {
+    padding: 20px;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+

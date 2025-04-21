@@ -1,0 +1,220 @@
+/* Ayurveda-themed chatbot styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f7f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(240, 247, 241, 0.9);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    height: 85vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(76, 138, 84, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #4c8a54 0%, #2a633a 100%);
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #38703f;
+    box-shadow: 0 2px 10px rgba(76, 138, 84, 0.2);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-header::before {
+    content: "☘️";
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-image: url('https://images.unsplash.com/photo-1581175009402-5e7b398389b3?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(240, 247, 241, 0.8);
+}
+
+/* Bot and user message containers */
+.bot-container, .user-container {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.bot-container {
+    justify-content: flex-start;
+}
+
+.user-container {
+    justify-content: flex-end;
+}
+
+/* Content container for both logo and message */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 80%;
+}
+
+.bot-container .content-container {
+    flex-direction: row;
+}
+
+.user-container .content-container {
+    flex-direction: row-reverse;
+}
+
+/* Logo container and styling */
+.logo-container {
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.logo-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4c8a54;
+}
+
+/* Message styling */
+.bot-message, .user-message {
+    padding: 12px 16px;
+    border-radius: 18px;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.bot-message {
+    background-color: #e6f4e8;
+    border-bottom-left-radius: 5px;
+    color: #2a633a;
+    border-left: 3px solid #4c8a54;
+}
+
+.user-message {
+    background-color: #4c8a54;
+    border-bottom-right-radius: 5px;
+    color: white;
+}
+
+.user-input {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+}
+
+.user-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #d1e6d6;
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.user-input input:focus {
+    border-color: #4c8a54;
+}
+
+.user-input button {
+    background: linear-gradient(135deg, #4c8a54 0%, #2a633a 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(76, 138, 84, 0.3);
+}
+
+.user-input button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 138, 84, 0.4);
+}
+
+.user-input button:active {
+    transform: translateY(0);
+}
+
+/* Make links in chat more visible */
+.bot-message a {
+    color: #2a633a;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bot-message a:hover {
+    color: #4c8a54;
+}
+
+/* Scrollbar styling */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #f0f7f1;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #4c8a54;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bot-container, .user-container {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #a1c5a6;
+}

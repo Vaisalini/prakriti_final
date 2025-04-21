@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-df9zIeAk5I3/9eun6MIKNU6EkPA7mryOONcZS/5YHH6JKeEeR2iS5hX1lUmXU5ENfAoswvt4A0T/5i2HyvmS9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your custom stylesheet -->
+    <link rel="stylesheet" href="reccomendations.css">
+</head>
+<body>
+  <div class="container">
+      <div class="slide">
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">For Vatta-Kapha, focus on light, warm, and easily digestible foods. Include grains like quinoa and barley, and avoid heavy, oily foods. Astringent flavors like leafy greens and bitter vegetables are beneficial to balance excess Kapha.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">VATTA-KAPHA</div>
+                  <div class="des">For Vatta-Kapha balance, eat warm and spiced foods to stimulate digestion. Choose a mix of grounding foods for Vatta and light foods for Kapha. Avoid dairy and cold foods that can aggravate Kapha.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXERCISES</div>
+                  <div class="des">For Vatta-Kapha, moderate intensity exercises like brisk walking, jogging, or cycling can help balance both energies. Incorporate strengthening routines like Pilates or yoga with some cardio to stimulate circulation.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(diet1.jpg);">
+              <div class="content">
+                  <div class="name">DIET</div>
+                  <div class="des">For Vatta-Kapha, focus on light, warm, and easily digestible foods. Include grains like quinoa and barley, and avoid heavy, oily foods. Astringent flavors like leafy greens and bitter vegetables are beneficial to balance excess Kapha.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(vatta.png);">
+              <div class="content">
+                  <div class="name">VATTA</div>
+                  <div class="des">For Vatta, focus on grounding, nourishing foods like root vegetables, healthy fats, and warm meals. Include warming spices like ginger, cinnamon, and turmeric to enhance digestion.</div>
+                  
+              </div>
+          </div>
+          <div class="item" style="background-image: url(yoga.jpg);">
+              <div class="content">
+                  <div class="name">EXERCISES</div>
+                  <div class="des">For Vatta-Kapha, moderate intensity exercises like brisk walking, jogging, or cycling can help balance both energies. Incorporate strengthening routines like Pilates or yoga with some cardio to stimulate circulation.</div>
+                  
+              </div>
+          </div>
+      </div>
+      <div class="button">
+          <button class="prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+  </div>  
+
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1])
+})
+</script>
+ 
+</body>
+</html>
