@@ -11,7 +11,7 @@ auth.onAuthStateChanged(function (user) {
       displayUserInfo(user.uid);
   } else {
       // No user is signed in
-      window.location.href = 'index.html'; // Redirect to login page if not logged in
+      window.location.href = 'welcome.html'; // Redirect to login page if not logged in
   }
 });
 
